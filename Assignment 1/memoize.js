@@ -1,6 +1,6 @@
 //5/6 test cases passed
 export default function memoize(func) {
-  let cache = {};
+  const cache = {};
 
   return function (input) {
     if (cache[input]) {

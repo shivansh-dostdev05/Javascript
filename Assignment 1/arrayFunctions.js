@@ -2,10 +2,8 @@
 Array.prototype.myReduce = function (callbackFunction) {
   const arr = this;
   let accumulator = arr[0];
-  let startIndex = 1;
 
-
-  for (let i = startIndex; i < arr.length; i++){
+  for (let i = 1; i < arr.length; i++){
     accumulator = callbackFunction(accumulator, arr[i]);
   }
 
@@ -16,10 +14,10 @@ Array.prototype.myReduce = function (callbackFunction) {
 //filter()
 Array.prototype.myFilter = function (callbackFunction) {
   const arr = this;
-  let result = [];
+  const result = [];
 
   for (let i = 0; i < arr.length; i++){
-    let value = callbackFunction(arr[i]);
+    const value = callbackFunction(arr[i]);
     if (value) {
       result.push(arr[i]);
     }
@@ -31,9 +29,9 @@ Array.prototype.myFilter = function (callbackFunction) {
 //map()
 Array.prototype.myMap = function (callbackFunction) {
   const arr = this;
-  let result = [];
+  const result = [];
   for (let i = 0; i < arr.length; i++) {
-    let value = callbackFunction(arr[i]);
+    const value = callbackFunction(arr[i]);
     result.push(value);
   }
 
